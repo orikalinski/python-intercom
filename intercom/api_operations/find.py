@@ -23,7 +23,7 @@ class Find(object):
                     raise Exception("There is more than 1 result (%s)" % len(data_list))
                 object_data = data_list[0]
             else:
-                object_data = data_list
+                object_data = {"data": data_list}
 
         if object_data is None:
             raise HttpError('Http Error - No response entity returned')
